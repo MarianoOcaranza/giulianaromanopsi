@@ -7,7 +7,8 @@ const About: React.FC = ()=> {
             <div>
             <Banner
                     title='¿Quién soy?'
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eveniet esse nisi iure molestiae tempora numquam placeat fugit sunt doloremque magni facere, repudiandae commodi obcaecati dicta itaque dolorem corrupti vero deserunt dolores earum voluptate quod aliquid odio. Aperiam at saepe, repellat totam accusamus quia minima iste officia fugiat illum cupiditate magni veritatis eos dolorem tempora quaerat tenetur provident ducimus culpa id, laboriosam autem quos fuga? Quisquam ad quos deserunt distinctio dignissimos consectetur minima adipisci incidunt debitis in praesentium dolorum, eius voluptatem, pariatur illum atque reprehenderit autem rem expedita aliquid obcaecati animi tempore vero! Ratione perferendis obcaecati nam, impedit enim error!"
+                    description="Mi nombre es Giuliana Romano, soy Licenciada en Psicología y me recibí a fines de 2023 en la Universidad Abierta Interamericana (UAI).
+                    "
                     bgColor='bg-violet-700'
                     textAlign='text-left'/>
                     

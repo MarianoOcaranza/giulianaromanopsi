@@ -13,7 +13,7 @@ const Banner: React.FC<Props> = (props) => {
         <>
         <div className={`p-6 m-7 ${props.bgColor} ${props.textAlign} rounded shadow-lg shadow-black`}>
            <h1 className="text-5xl text-slate-300 font-bold">{props.title}</h1>
-           <p>{props.description}</p>
+           <p className='mt-5 text-slate-200 font-semibold text-xl whitespace-pre-line'>{props.description}</p>
         </div>
         </>
     )
