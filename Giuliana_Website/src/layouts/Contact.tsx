@@ -114,7 +114,7 @@ const Contact: React.FC = ()=> {
                 {isSubmitting && "Enviando..."}
                 {success && !isSubmitting && "Enviado con éxito!"}
                 {!isSubmitting && !success && !error && "Enviar"}
-                {error && "Hubo un error, click para intentar de nuevo"}
+                {error && !isSubmitting && !success && "Hubo un error, click para intentar de nuevo"}
                 </button>
             </form>
             </div>
