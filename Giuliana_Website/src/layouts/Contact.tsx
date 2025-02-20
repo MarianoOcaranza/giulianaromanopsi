@@ -19,7 +19,7 @@ const Contact: React.FC = ()=> {
         e.preventDefault();
         setIsSubmitting(true);
         try {
-            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/send-email`, { // Aca hay que armar un backend que procese los datos del form
+            const response = await fetch(`/api/send-email`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
