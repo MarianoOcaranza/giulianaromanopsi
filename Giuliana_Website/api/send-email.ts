@@ -1,17 +1,17 @@
 import {VercelRequest, VercelResponse} from '@vercel/node'
 import sgMail from '@sendgrid/mail';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
-export default async function handler(req, res) {
+export default async function handler(req: VercelRequest, res:VercelResponse) {
     if (req.method !== 'POST') {
         return res.status(405).json({error: 'Method not allowed'});
     }
     const {firstName, lastName, email, phone, shortMessage} = req.body;
 
     const msg = {
-        to: process.env.RECEIVING_EMAIL,
-        from: process.env.SENDGRID_VERIFIED_EMAIL,
+        to: process.env.RECEIVING_EMAIL!,
+        from: process.env.SENDGRID_VERIFIED_EMAIL!,
         subject: `Consulta de ${firstName} ${lastName}`,
         text: `
         Nombre: ${firstName} ${lastName}\n
