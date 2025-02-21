@@ -19,11 +19,11 @@
       ]
     },
     {
-      "source": "/Giuliana_Website/robots.txt",
+      "source": "/robots.txt",
       "headers": [{ "key": "Content-Type", "value": "text/plain" }]
     },
     {
-      "source": "/Giuliana_Website/sitemap.xml",
+      "source": "/sitemap.xml",
       "headers": [{ "key": "Content-Type", "value": "application/xml" }]
     }
   ],
