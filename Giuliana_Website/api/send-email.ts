@@ -13,12 +13,7 @@ export default async function handler(req: VercelRequest, res:VercelResponse) {
         to: process.env.RECEIVING_EMAIL!,
         from: process.env.SENDGRID_VERIFIED_EMAIL!,
         subject: `Consulta de ${firstName} ${lastName}`,
-        text: `
-        Nombre: ${firstName} ${lastName}\n
-        Telefono: ${phone}\n
-        Email: ${email}\n\n
-        Mensaje/Motivo de consulta:\n
-        ${shortMessage}  `
+        text:`Nombre: ${firstName} ${lastName}\nTelefono: ${phone}\nEmail: ${email}\n\nMensaje/Motivo de consulta:\n${shortMessage}`
     };
 
     try {
