@@ -47,7 +47,7 @@ const Contact: React.FC = ()=> {
          <h2 className="text-2xl text-center font-bold mb-4">Contactame!</h2>
          <div className='text-center'>
             <p className="mb-4">Enviame un WhatsApp con tu nombre y tu consulta!</p>
-            <a className="bg-green-400 hover:bg-green-600 transition-all duration-300 p-3" href={`https://wa.me/${process.env.WHATSAPP_NUM}`} target="_blank" rel='noopener noreferrer'>Ir a WhatsApp</a>
+            <a className="bg-green-400 hover:bg-green-600 transition-all duration-300 p-3" href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUM}`} target="_blank" rel='noopener noreferrer'>Ir a WhatsApp</a>
          </div>
          <p className='mt-6 text-xl mb-3'>Sino, podés enviarme un mail:</p>
             <form onSubmit={handleSubmit}>
