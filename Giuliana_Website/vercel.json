@@ -21,5 +21,9 @@
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "routes": [
+    { "src": "/robots.txt", "dest": "/Giuliana_Website/robots.txt"},
+    { "src": "/sitemap.xml", "dest": "/Giuliana_Website/sitemap.xml"}
   ]
 }
