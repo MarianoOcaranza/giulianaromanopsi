@@ -19,7 +19,7 @@ const Contact: React.FC = ()=> {
         e.preventDefault();
         setIsSubmitting(true);
         try {
-            const response = await fetch(`/api/send-email`, {
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
