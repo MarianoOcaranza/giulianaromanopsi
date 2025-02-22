@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const Contact: React.FC = ()=> {
-/*const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
@@ -11,20 +12,32 @@ const Contact: React.FC = ()=> {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({...formData, [e.target.name]: e.target.value });
     };
+
+    const handleRecaptcha = (token: string | null) => {
+        setRecaptchaToken(token);
+      };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+        if (!recaptchaToken) {
+            setError(true);
+            setIsSubmitting(false);
+            alert('Por favor, completa el reCAPTCHA para verificar que no eres un bot');
+            return;
+        }
         try {
             const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({...formData, "g-recaptcha-response": recaptchaToken}),
             });
             if (response.ok) {
                 setSuccess(true);
@@ -39,7 +52,7 @@ const Contact: React.FC = ()=> {
         } finally {
             setIsSubmitting(false);
         }
-    }*/ 
+    }
 
     return (
         <>
@@ -49,7 +62,7 @@ const Contact: React.FC = ()=> {
             <p className="mb-4">Enviame un WhatsApp con tu nombre y tu consulta!</p>
             <a className="bg-green-400 hover:bg-green-600 transition-all duration-300 p-3" href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUM}`} target="_blank" rel='noopener noreferrer'>Ir a WhatsApp</a>
          </div>
-         {/*
+         
          <p className='mt-6 text-xl mb-3'>Sino, podés enviarme un mail:</p>
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
@@ -107,6 +120,7 @@ const Contact: React.FC = ()=> {
                         required
                     />
                 </div>
+                <ReCAPTCHA sitekey="6Lf4g98qAAAAABuJZhlYmqVvcjqiG1xkE9X3drZo" onChange={handleRecaptcha} />
                 <button
                     type="submit"
                     className={`w-full 
@@ -123,8 +137,6 @@ const Contact: React.FC = ()=> {
                 {error && !isSubmitting && !success && "Hubo un error, click para intentar de nuevo"}
                 </button>
             </form>
-            */}
-            <p className='mt-10'>Podés enviarme un mail a giuliana19romano99@gmail.com</p>
             </div>
         </>
     )
