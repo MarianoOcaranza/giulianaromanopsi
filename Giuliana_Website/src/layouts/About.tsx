@@ -22,7 +22,7 @@ const About: React.FC = ()=> {
                     
              <Banner
                     title='¿En qué me especializo?'
-                    description="Trabajo con un enfoque cognitivo-conductual y DBT, lo que significa que no solo exploramos lo que te pasa, sino que también buscamos estrategias prácticas par afrontar los desafíos del día a día.
+                    description="Trabajo con un enfoque cognitivo-conductual y DBT, lo que significa que no solo exploramos lo que te pasa, sino que también buscamos estrategias prácticas para afrontar los desafíos del día a día.
                     Me gusta pensar que la terapia es un arte en constante construcción, donde juntos encontramos nuevas formas de ver, sentir y actuar. Si estás buscando un espacio de escucha, sin juicios y con herramientas concretas, ¡estoy acá para ayudarte!"
                     bgColor='bg-purple-800'
                     textAlign="text-left"/>
