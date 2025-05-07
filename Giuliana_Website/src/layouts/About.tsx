@@ -25,8 +25,7 @@ const About: React.FC = () => {
       >
         <h3 className="text-3xl font-semibold text-violet-800 mb-4">¿Quién soy?</h3>
         <p className="text-gray-700 leading-relaxed">
-          Mi nombre es <span className="font-semibold">Giuliana Romano</span>, soy Licenciada en Psicología y me recibí a fines de 2023 en la Universidad Abierta Interamericana (UAI).  
-          Soy de Merlo y atiendo pacientes en modalidad virtual.  
+          Mi nombre es <span className="font-semibold">Giuliana Romano</span>, soy Licenciada en Psicología y me recibí en la Universidad Abierta Interamericana (UAI).
           <br /><br />
           Mi trabajo consiste en acompañar a las personas en su proceso de cambio, brindando herramientas para que puedan comprenderse mejor, regular sus emociones y construir una vida más plena.  
           Creo en el poder de la terapia como un espacio de crecimiento, donde cada pequeño avance es un logro significativo.
