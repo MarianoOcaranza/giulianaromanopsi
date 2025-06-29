@@ -3,6 +3,7 @@ import MainLayout from './layouts/MainLayout'
 import Landing from './layouts/Landing'
 import About from './layouts/About'
 import Contact from './layouts/Contact'
+import Professional from './layouts/Professional'
 import NotFound from './layouts/NotFound'
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
                 <Route path='/' element={<Landing/>}/>
                 <Route path='/about' element={<About/>}/>
                 <Route path='/contact' element={<Contact/>}/>
+                <Route path='/professional' element={<Professional/>}/>
                 <Route path='*' element={<NotFound/>}/>
             </Routes>
         </MainLayout>
