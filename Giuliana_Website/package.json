@@ -1,31 +1,27 @@
 {
   "name": "giuliana-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.5.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": ">=20.11.1"
+  },
   "dependencies": {
-    "@headlessui/react": "^2.2.0",
-    "@heroicons/react": "^2.2.0",
-    "@material-tailwind/react": "^2.1.10",
-    "@sendgrid/mail": "^8.1.4",
-    "@vercel/node": "^4.0.0",
-    "autoprefixer": "^10.4.20",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
+    "@tailwindcss/vite": "^4.1.11",
     "framer-motion": "^12.4.7",
-    "postcss": "^8.4.49",
+    "lucide-react": "^0.525.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.54.2",
     "react-router": "^7.1.1",
     "react-router-dom": "^7.1.1",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -40,8 +36,5 @@
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5"
-  },
-  "overrides": {
-    "esbuild": "^0.25.0"
   }
 }
