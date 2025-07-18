@@ -1,2 +1,3 @@
 # PresentationPageGR
-Presentation page for psychologist
+
+Simple presentation page for psychologist using React
